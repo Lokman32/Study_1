@@ -1,12 +1,16 @@
 import React from "react";
 
+import TaApp from "./toolkitApiTp/TaApp";
 import "bootstrap/dist/css/bootstrap.min.css"
-import TpApp from "./toolkitTp/TpApp";
-import ComposantApp from "./cherchApp/ComposantApp";
+import { Provider } from "react-redux";
+import { store } from "./toolkitApiTp/Store";
 
 export default function App() {
 
   return (
-    <ComposantApp />
+    <Provider store={store}>
+      <TaApp />
+    </Provider>
+      
   );
 }
